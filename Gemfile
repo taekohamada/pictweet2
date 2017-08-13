@@ -6,7 +6,14 @@ gem 'rails', '4.2.6'
 # Use mysql as the database for Active Record
 gem 'mysql2', '0.3.18'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+
+#9行目付近、sass-railsの横の数字を以下のように変更
+gem 'sass-rails', '~> 4.0.2'
+  #末尾に以下を追記
+gem 'pry-rails'
+gem 'compass-rails','~> 2.0'
+gem 'sprockets', '2.11.0'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
