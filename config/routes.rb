@@ -1,7 +1,9 @@
-Rails.application.routes.draw  do
-  get 'tweets' => 'tweets#index'
-end
-
+  Rails.application.routes.draw do
+  devise_for :users
+    get   'tweets'      =>  'tweets#index'     #ツイート一覧画面
+    get   'tweets/new'  =>  'tweets#new'
+    post   'tweets' => 'tweets#create'  #ツイート投稿画面
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
