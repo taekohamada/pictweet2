@@ -2,7 +2,7 @@
 
 
     def index
-    @tweets = Tweet.all.order("id DESC").page(params[:page]).per(5)
+    @tweets = Tweet.all.order("id DESC").page(params[:page]).per(4)
 
     end
 
