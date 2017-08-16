@@ -3,7 +3,10 @@
     get   'tweets'      =>  'tweets#index'     #ツイート一覧画面
     get   'tweets/new'  =>  'tweets#new'
     post   'tweets'     => 'tweets#create'
-     get   'user/:id'   =>  'user#show'#ツイート投稿画面
+    delete 'tweets/:id' =>  'tweets#destroy'
+    get   'user/:id'    =>  'user#show'
+    get  'tweets/:id/edit'  => 'tweets#edit'#ツイート投稿画面
+
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

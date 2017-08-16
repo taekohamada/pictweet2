@@ -14,6 +14,18 @@
     end
 
 
+   def destroy
+    @tweet = Tweet.find(params[:id])
+   end
+
+   def edit
+    tweet = Tweet.find(params[:id])
+    if tweet.user_id == current_user.id
+      tweet.edit
+    end
+
+ end
+
    private
    def tweet_params
    params.permit(:name, :image, :text)
@@ -23,4 +35,4 @@
    redirect_to action: :index unless user_signed_in?
    end
 
- end
+end
