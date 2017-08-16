@@ -4,6 +4,7 @@
     get   'tweets/new'  =>  'tweets#new'
     post   'tweets'     => 'tweets#create'
     delete 'tweets/:id' =>  'tweets#destroy'
+    patch 'tweets/:id'  =>  'tweets#update'
     get   'user/:id'    =>  'user#show'
     get  'tweets/:id/edit'  => 'tweets#edit'#ツイート投稿画面
 
